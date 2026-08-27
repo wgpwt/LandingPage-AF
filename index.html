@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#4f056c">
+<meta name="description" content="Alfa Fitness Medan — fitness center khusus wanita, personal training, group class, kids activities, senior training, massage, dan healthy café.">
+<title>Alfa Fitness Medan | Fitness Center Khusus Wanita</title>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alfa Fitness Medan | Fitness Center Khusus Wanita">
+<meta property="og:description" content="Fitness center khusus wanita di Medan — PT, group class, kids activities, program 60+, massage, dan healthy café.">
+<meta property="og:url" content="https://alfafitness.id/">
+<!-- TODO: isi og:image dengan URL gambar publik (bukan base64), mis. dari repo GitHub ini -->
+<!-- <meta property="og:image" content="https://alfafitness.id/og-image.jpg"> -->
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alfa Fitness Medan | Fitness Center Khusus Wanita">
+<meta name="twitter:description" content="Fitness center khusus wanita di Medan — PT, group class, kids activities, program 60+, massage, dan healthy café.">
+
+<link rel="icon" href="/favicon.ico">
+
+<style>
+  html,body{margin:0;padding:0;background:#fffdfc}
+  #alfaFrame{width:100%;border:0;display:block}
+</style>
+</head>
+<body>
+
+<!--
+  GANTI URL DI BAWAH dengan URL deployment GAS kamu, contoh:
+  https://script.google.com/macros/s/AKfycb.../exec
+-->
+<iframe
+  id="alfaFrame"
+  src="https://script.google.com/macros/s/AKfycbzsebwlK2N7wKGrPvzqRMb7kPAeBIcu23l4uJ-maxEba7fzg9g6XHZ1V8_2d9xJQg_B/exec"
+  title="Alfa Fitness Medan"
+  scrolling="no"
+  loading="eager"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
+<script>
+  // Terima pesan tinggi konten dari dalam GAS (dikirim lewat postMessage di script.html GAS)
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'alfaFitnessHeight') {
+      var h = parseInt(e.data.height, 10);
+      if (h && h > 0) {
+        document.getElementById('alfaFrame').style.height = h + 'px';
+      }
+    }
+  });
+
+  // Fallback awal: kasih tinggi minimum sebelum pesan pertama diterima,
+  // supaya tidak terlihat kosong/collapse saat baru load.
+  document.getElementById('alfaFrame').style.height = '100vh';
+</script>
+
+</body>
+</html>
