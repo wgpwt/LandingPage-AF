@@ -12,23 +12,74 @@
 <meta property="og:title" content="Alfa Fitness Medan | Fitness Center Khusus Wanita">
 <meta property="og:description" content="Fitness center khusus wanita di Medan — PT, group class, kids activities, program 60+, massage, dan healthy café.">
 <meta property="og:url" content="https://alfafitness.id/">
-<!-- TODO: isi og:image dengan URL gambar publik (bukan base64), mis. dari repo GitHub ini -->
-<!-- <meta property="og:image" content="https://alfafitness.id/og-image.jpg"> -->
+<meta property="og:image" content="https://alfafitness.id/og-image.jpg">
+<meta property="og:locale" content="id_ID">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alfa Fitness Medan | Fitness Center Khusus Wanita">
 <meta name="twitter:description" content="Fitness center khusus wanita di Medan — PT, group class, kids activities, program 60+, massage, dan healthy café.">
+<meta name="twitter:image" content="https://alfafitness.id/og-image.jpg">
 
 <link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://alfafitness.id/">
+
+<!-- JSON-LD structured data: tells Google who/where/when you are, independent of the iframe -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Alfa Fitness Medan",
+  "alternateName": "Alfa Fitness",
+  "description": "Fitness center khusus wanita di Medan — personal training, group class, kids activities, program usia 60+, sport massage, dan healthy café.",
+  "url": "https://alfafitness.id/",
+  "telephone": "+62811-6301-253",
+  "priceRange": "$$",
+  "image": "https://alfafitness.id/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jalan Kelapa Raya Nomor 5, Kelurahan Gedung Johor, Kecamatan Medan Johor",
+    "addressLocality": "Medan",
+    "postalCode": "20145",
+    "addressRegion": "Sumatera Utara",
+    "addressCountry": "ID"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://wa.me/628116301253"
+  ]
+}
+</script>
 
 <style>
-  html,body{margin:0;padding:0;background:#fffdfc}
+  html,body{margin:0;padding:0;background:#fffdfc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
   #alfaFrame{width:100%;border:0;display:block}
+
+  /* Visible, real HTML text for crawlers — kept compact so it doesn't compete with the app UI */
+  .seo-footer{
+    max-width:720px;margin:0 auto;padding:28px 20px 40px;
+    color:#5a4a63;font-size:14px;line-height:1.7;
+  }
+  .seo-footer h1{font-size:18px;color:#2a0838;margin:0 0 4px}
+  .seo-footer h2{font-size:14px;color:#4f056c;margin:16px 0 4px}
+  .seo-footer a{color:#4f056c}
 </style>
 </head>
 <body>
-
 <!--
   GANTI URL DI BAWAH dengan URL deployment GAS kamu, contoh:
   https://script.google.com/macros/s/AKfycb.../exec
@@ -42,6 +93,24 @@
   referrerpolicy="strict-origin-when-cross-origin">
 </iframe>
 
+<!-- Real, crawlable content — visible on the page below the app, not JS-injected -->
+<footer class="seo-footer">
+  <h1>Alfa Fitness Medan — Fitness Center Khusus Wanita</h1>
+  <p>Alfa Fitness adalah fitness center khusus wanita di Medan yang membantu membangun kesehatan, kekuatan, kepercayaan diri, dan rutinitas olahraga yang bisa dipertahankan jangka panjang.</p>
+
+  <h2>Layanan</h2>
+  <p>Personal training 1-on-1, private group class (3–5 orang), workout group class umum, program khusus usia 60+, Alfa Fun Kids Group, sport massage, dan healthy café dengan cold-press juice.</p>
+
+  <h2>Alamat</h2>
+  <p>Jalan Kelapa Raya Nomor 5, Kelurahan Gedung Johor, Kecamatan Medan Johor, Medan 20145, Sumatera Utara.</p>
+
+  <h2>Jam Operasional</h2>
+  <p>Senin–Jumat: 07.00–21.00 WIB<br>Sabtu–Minggu: 07.00–17.00 WIB</p>
+
+  <h2>Kontak</h2>
+  <p>WhatsApp: <a href="https://wa.me/628116301253">0811 6301 253</a></p>
+</footer>
+
 <script>
   // Terima pesan tinggi konten dari dalam GAS (dikirim lewat postMessage di script.html GAS)
   window.addEventListener('message', function (e) {
@@ -52,11 +121,9 @@
       }
     }
   });
-
   // Fallback awal: kasih tinggi minimum sebelum pesan pertama diterima,
   // supaya tidak terlihat kosong/collapse saat baru load.
   document.getElementById('alfaFrame').style.height = '100vh';
 </script>
-
 </body>
 </html>
